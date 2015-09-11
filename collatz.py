@@ -1,4 +1,4 @@
-x = input("Start number ")
+
 
 def iterate(n):
 	if n % 2 == 0:
@@ -14,5 +14,12 @@ def chain_length(m):
 		m = iterate (m)
 		count = count + 1
 	return count
-	
-print chain_length(x)	
+
+list = []	
+for number in range(1,1000000):
+	temp = chain_length(number)
+	list.append(temp)
+
+# print list	
+print max(list)
+print list.index(max(list)) + 1
